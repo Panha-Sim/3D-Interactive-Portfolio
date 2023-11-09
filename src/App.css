@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;800&family=Poppins:wght@100;200;300&family=Spline+Sans+Mono:wght@700&family=Spline+Sans:wght@300;700&display=swap');
+body{
+  margin:0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body, 
+#root{
+  overflow: hidden;
+  background-color: #0e1129;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.spline{
+  height: 90%;
+  position: absolute;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap:80px;
+
+  width: 75%;
+  position: relative;
   color: white;
 }
+h1{
+  font-family: 'Spline Sans Mono', monospace;
 
-.App-link {
-  color: #61dafb;
+  font-weight: bold;
+  font-size: 70px;
+  /* 70px */
+  margin:0;
+  
+  min-width: 400px;
+  line-height: 90px;
+}
+p{
+  letter-spacing: 2px;
+  font-family: 'Spline Sans', sans-serif;
+  font-weight: 400;
+  max-width: 450px;
+  min-width: 300px;
+  line-height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1, p{
+  margin: 0 30px 0 3vw;
+  /* 100px */
+}
+.wrapper{
+  position: absolute;
+  display: flex;
+  width: 960px;
+  justify-content: flex-start;
+  align-items: center;
+  animation-name: slideToRightWithFade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+.line{
+  margin-left:3vw;
+  width: 2px;
+  height: 64vh;
+  background: linear-gradient(to bottom, rgb(208, 147, 34),rgb(39, 39, 171));
+  border: none;
+  
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap:15px;
+
+  width: 50%;
+  padding: 12px 75px;
+
+  background-color: transparent; /* Make the background transparent */
+  backdrop-filter: blur(10px); /* Apply a blur effect behind the button */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Add a white border */
+  border-radius: 15px;
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  
+  margin: 0 3vw;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 17.5px; /* Set the font size */
+  font-weight: lighter;
+  color: white; /* Set the text color */
+  transition: all 0.8s ease; 
+  line-height: 1.5; /* Adjust line height to control the space above and below the text */
+  white-space: nowrap; /* Prevents the text from wrapping to a new line */
+}
+
+.downloadButton:hover {
+  border: 2px solid rgba(255, 255, 255, 1); /* Add a white border */
+}
+
+.nav{
+  color: white;
+  position: relative;
+  height: 130px;
+  margin-bottom: 6vh;
+  display: flex;
+  animation-name: slideDownWithFade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:50px;
+  list-style-type: none;
+  
+}
+li a{
+  color: white;
+  font-family: 'Spline Sans', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+ 
+}
+ul > li{
+  transition: all 0.3s ease; 
+  border:1px solid rgba(255, 255, 255, 0.0);
+  border-radius: 12px;
+  padding: 6px 20px;
+  transition: all 1s ease; 
+}
+ul > li:hover{
+  border:1px solid rgba(255, 255, 255, 0.2);
+}
+.contactButton{
+  cursor:pointer;
+  font-weight: bold;
+  background-color: rgba(178, 132, 46, 0.525); 
+  backdrop-filter: blur(100px); 
+  
+  border-radius: 15px;
+  border:1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 30px;
+  transition: all .8s ease-in-out; 
+  
+}
+.contactButton:hover{
+  border:1px solid rgba(255, 255, 255, 1);
+  transform: translateY(-5px);
+
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0e1129;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+  font-size: 2rem;
+}
+
+@media (max-height: 700px){
+  .container{
+    gap:50px
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media  (max-width: 1650px) {
+  .downloadButton{
+    padding: 12px 80px;
+  }
+  /* .container{
+    width: 100%;
+  } */
+
+}
+
+@media  (max-width: 1000px) {
+  .wrapper{
+    margin-left: 30px;
+  }
+  .line{
+    display: none;
+  }
+}
+@media (max-width:800px){
+  .downloadButton{
+    width: 100%;
+    padding: 8px 55px;
+  }
+  .container{
+    width: 100%;
+  }
+  .wrapper{
+    width: 40vw;  
+  }
+  h1{
+    font-size: 50px;
+    line-height: 60px;
+  }
+  p{
+    font-size: 12px;
+    line-height: 25px;
+  }
+  
+}
+@media (max-width:750px) {
+  .downloadButton{
+    padding: 8px 40px;
+  }
+}
+@media (max-width: 650px){
+  .wrapper{
+    width: 80%;
+  }
+  .downloadButton{
+    width:60%;
+  }
+}
+@keyframes slideToRightWithFade {
+  0%{
+    transform:translateX(-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  
+}
+
+@keyframes slideDownWithFade {
+  0%{
+    transform:translateY(-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Spline from '@splinetool/react-spline';
+import "./App.css"
+import NavBar from './Components/Nav';
+import Index from './pages';
+import Loader from './Components/loading';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const[loading, setLoading] = useState(true);
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setLoading(false);
+    },3000);
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading && <div className='loading-screen'><Loader/></div>}
+      <Spline className='spline' scene="https://prod.spline.design/fdtWS0Vasi3kNg9J/scene.splinecode" />
+      <NavBar/>
+      <Index/>
+    </>
   );
 }
 
