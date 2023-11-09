@@ -1,14 +1,22 @@
+import { Link } from "react-router-dom"
 
 
 export default function NavBar(){
+    const list = [
+        {name: "Home", to: "/"},
+        {name: "About", to: "/about"},
+        {name: "Projects", to: "/projects"}
+    ]
     
     return(
         <nav className="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <button className="contactButton"><li><a href="#">Contact</a></li></button>
+                {list.map(list=>{
+                    return(
+                        <li><Link to={list.to}>{list.name}</Link></li>
+                    )
+                })}
+                <button className="contactButton"><li><Link to="/contact">Contact</Link></li></button>
                 
             </ul>
         </nav>

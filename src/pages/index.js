@@ -1,5 +1,6 @@
 import ResumeIcon from '../Components/resume';
 
+
 export default function Index(){
     const onButtonClick = () => {
         const pdfUrl = `${process.env.PUBLIC_URL}/Resume.pdf`;
@@ -11,16 +12,28 @@ export default function Index(){
         document.body.removeChild(link);
       };
     return(
+      <>
+      
         <div className='wrapper'>
         <div className='line'></div>
         <div className='container'>
-          <h1>Lets Work Together</h1>
-          <p>Torquent fringilla semper habitant interdum nulla nisl. Tortor, ligula erat vestibulum. Quam nisi varius purus taciti quisque enim ut turpis. Non lacinia eros id interdum sollicitudin rutrum suscipit orci egestas et justo.</p>
+
+          <h1 className='homeh1p'>Lets Work Together</h1>
+          <p className='homeh1p'>
+            Torquent fringilla semper habitant interdum nulla
+            nisl. Tortor, ligula erat vestibulum. Quam nisi
+            varius purus taciti quisque enim ut turpis. Non
+            lacinia eros id interdum sollicitudin rutrum 
+            suscipit orci egestas et justo.
+            </p>
+
           <button className='downloadButton' onClick={onButtonClick}>
             <ResumeIcon/>
             Download Resume
           </button>
+          
         </div>
       </div>
+      </>
     )
 }

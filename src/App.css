@@ -8,6 +8,25 @@ body,
   overflow: hidden;
   background-color: #0e1129;
 }
+.purple{
+  color:rgb(166, 107, 221);
+}
+.yellow{
+  color: rgb(221, 198, 64);
+}
+.red{
+color: rgb(238, 70, 70);
+}
+.green{
+
+}
+.grey{
+  color:rgb(178, 177, 177)
+}
+.blue{
+  color: rgb(57, 110, 208);
+}
+
 .spline{
   height: 90%;
   position: absolute;
@@ -21,7 +40,7 @@ body,
   position: relative;
   color: white;
 }
-h1{
+ h1{
   font-family: 'Spline Sans Mono', monospace;
 
   font-weight: bold;
@@ -32,7 +51,7 @@ h1{
   min-width: 400px;
   line-height: 90px;
 }
-p{
+ p{
   letter-spacing: 2px;
   font-family: 'Spline Sans', sans-serif;
   font-weight: 400;
@@ -41,7 +60,7 @@ p{
   line-height: 30px;
 }
 
-h1, p{
+.homeh1p{
   margin: 0 30px 0 3vw;
   /* 100px */
 }
@@ -158,6 +177,30 @@ ul > li:hover{
   z-index: 1000; /* Ensure it's above other content */
   font-size: 2rem;
 }
+.ide > p{
+  max-width: 100%;
+  line-height: 20px;
+}
+.ide{
+  position: relative;
+
+  margin-left: 50px;
+  padding-left: 30px;
+
+  height: 70vh;
+  width: 40%;
+
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.1); 
+  border-left: 2px solid  rgb(208, 147, 34);
+  border-radius: 15px;
+  backdrop-filter: blur(10px); 
+  
+  transition: all 0.3s ease; 
+  animation-name: slideToRightWithFade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
 
 @media (max-height: 700px){
   .container{
@@ -194,11 +237,11 @@ ul > li:hover{
   .wrapper{
     width: 40vw;  
   }
-  h1{
+   h1{
     font-size: 50px;
     line-height: 60px;
   }
-  p{
+   p{
     font-size: 12px;
     line-height: 25px;
   }
