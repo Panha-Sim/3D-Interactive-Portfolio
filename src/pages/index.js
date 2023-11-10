@@ -1,5 +1,5 @@
 import ResumeIcon from '../Components/resume';
-
+import Contact from '../Components/Contact.jsx';
 
 export default function Index(){
     const onButtonClick = () => {
@@ -20,19 +20,21 @@ export default function Index(){
 
           <h1 className='homeh1p'>Lets Work Together</h1>
           <p className='homeh1p'>
-            Torquent fringilla semper habitant interdum nulla
-            nisl. Tortor, ligula erat vestibulum. Quam nisi
-            varius purus taciti quisque enim ut turpis. Non
-            lacinia eros id interdum sollicitudin rutrum 
-            suscipit orci egestas et justo.
+            Hi, I'm Panha Sim, a passionate Software Engineer
+            I bring idea to life. Specializing in React, Spring Boot, 
+            ASP.NET, Express.js, MongoDB, and PostgreSQL
+            let’s connect and explore how we can collaborate 
+            on your next project.
             </p>
-
-          <button className='downloadButton' onClick={onButtonClick}>
-            <ResumeIcon/>
-            Download Resume
-          </button>
-          
+          <div>
+            <button className='downloadButton' onClick={onButtonClick}>
+              <ResumeIcon/>
+              Download Resume
+            </button>      
+            <Contact/>   
+          </div>
         </div>
+        
       </div>
       </>
     )

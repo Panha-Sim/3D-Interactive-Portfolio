@@ -17,9 +17,7 @@ export default function About(){
             <p className="purple">&emsp;&emsp; return <span className="grey">(</span> </p>
             <p className="grey">&emsp;&emsp;&emsp;&emsp;[{curlyBracket} <span className="yellow">"Grand Canyon University"</span>,<span className="yellow"> "Software Engineering"</span> {closeCurlyBracket}]</p>
             <p className="grey">&emsp;&emsp; )</p>
-            <p className="grey">&emsp; {closeCurlyBracket}</p>
-
-            
+            <p className="grey">&emsp; {closeCurlyBracket}</p>            
 
         </div>
 
