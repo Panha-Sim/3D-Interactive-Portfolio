@@ -1,24 +1,34 @@
 import { Link } from "react-router-dom"
+import "./Nav.css"
+import Burger from "./Burger"
+
 
 
 export default function NavBar(){
     const list = [
-        {name: "Home", to: "/"},
-        {name: "About", to: "/about"},
-        {name: "Projects", to: "/projects"}
+        {name: "Home", to: "/", burger:"burger1"},
+        {name: "About", to: "/about", burger:"burger2"},
+        {name: "Projects", to: "/projects", burger:"burger3"}
     ]
-    
+  
+
     return(
+        <>
+        
         <nav className="nav">
-            <ul>
-                {list.map(list=>{
+            <img className="logo" alt="Logo" src={`${process.env.PUBLIC_URL}/LogoNew.png`}></img>
+            <Burger/>
+            <div className="navList">
+                {list.map(list => {
                     return(
-                        <li><Link to={list.to}>{list.name}</Link></li>
+                        <Link to={list.to}>{list.name}</Link>
                     )
                 })}
-                <button className="contactButton"><li><Link to="/contact">Contact</Link></li></button>
-                
-            </ul>
+                <button className="contactButton"><Link>Contact</Link></button>
+            </div>
+            
+            
         </nav>
+        </>
     )
 }

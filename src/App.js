@@ -15,7 +15,7 @@ function App() {
       setLoading(false);
     },3000);
   },[])
-
+  
   return (
     <>
       {loading && <div className='loading-screen'><Loader/></div>}

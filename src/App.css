@@ -5,7 +5,6 @@ body{
 html,
 body, 
 #root{
-  
   background-color: #0e1129;
 }
 .purple{
@@ -27,6 +26,7 @@ color: rgb(238, 70, 70);
   color: rgb(57, 110, 208);
 }
 
+
 .spline{
   height: 90%;
   position: absolute;
@@ -38,7 +38,7 @@ color: rgb(238, 70, 70);
   gap:60px;
 
   width: 75%;
-  position: relative;
+  /* position: relative; */
   color: white;
 }
  h1{
@@ -113,58 +113,6 @@ color: rgb(238, 70, 70);
   border: 2px solid rgba(255, 255, 255, 1); /* Add a white border */
 }
 
-.nav{
-  color: white;
-  position: relative;
-  height: 130px;
-  margin-bottom: 6vh;
-  display: flex;
-  animation-name: slideDownWithFade;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-}
-ul{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap:50px;
-  list-style-type: none;
-  
-}
-li a{
-  color: white;
-  font-family: 'Spline Sans', sans-serif;
-  font-size: 18px;
-  text-decoration: none;
- 
-}
-ul > li{
-  transition: all 0.3s ease; 
-  border:1px solid rgba(255, 255, 255, 0.0);
-  border-radius: 12px;
-  padding: 6px 20px;
-  transition: all 1s ease; 
-}
-ul > li:hover{
-  border:1px solid rgba(255, 255, 255, 0.2);
-}
-.contactButton{
-  cursor:pointer;
-  font-weight: bold;
-  background-color: rgba(178, 132, 46, 0.525); 
-  backdrop-filter: blur(100px); 
-  
-  border-radius: 15px;
-  border:1px solid rgba(255, 255, 255, 0.5);
-  padding: 10px 30px;
-  transition: all .8s ease-in-out; 
-  
-}
-.contactButton:hover{
-  border:1px solid rgba(255, 255, 255, 1);
-  transform: translateY(-5px);
-
-}
 .loading-screen {
   position: fixed;
   top: 0;
@@ -260,6 +208,10 @@ ul > li:hover{
   }
   .downloadButton{
     width:60%;
+  }
+  .ide{
+    width: 90%;
+    margin-left: 10px;
   }
 }
 @keyframes slideToRightWithFade {

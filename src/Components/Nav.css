@@ -1,0 +1,112 @@
+a{
+  text-decoration: none;
+  font-family: 'Spline Sans', sans-serif;
+  color:white;
+}
+.logo{
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  margin: 0 50px;
+}
+.nav{
+  position: relative;
+  display: flex;
+  padding-bottom: 38px;
+  padding-top: 30px;  
+}
+.navList{
+  display: flex;
+  justify-content: flex-start;
+
+  gap:60px;
+  margin-left: 30px;
+  align-items: center;
+}
+.navList > a{
+  color: white; 
+
+  font-family: 'Spline Sans', sans-serif;
+  font-size: 18px;
+  padding: 6px 20px;
+  border:1px solid rgba(255, 255, 255, 0.0);
+  border-radius: 12px;
+  transition: all 1s ease; 
+}
+.navList > a:hover{
+  border:1px solid rgba(255, 255, 255, 0.2);
+}
+.contactButton{
+  cursor:pointer;
+  background-color: rgba(178, 132, 46, 0.525); 
+  backdrop-filter: blur(100px); 
+  
+  border-radius: 15px;
+  border:1px solid rgba(255, 255, 255, 0.5);
+  padding: 11px 32px;
+  transition: all .8s ease-in-out; 
+}
+
+.contactButton > a{
+  font-family: 'Spline Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.contactButton:hover{
+  border:1px solid rgba(255, 255, 255, 1);
+  transform: translateY(-5px);
+
+}
+.nav button{
+  cursor: pointer;
+}
+.burgerNav{
+  display: none;
+  
+}
+.close{
+  z-index: 10;
+  position: absolute;
+  display:  flex;
+  width: 100vw;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  gap:100px;
+  background-color: transparent;
+  backdrop-filter: blur(10px); 
+  transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+  transition-delay: 100ms;
+  opacity: 0;
+}
+
+@media (max-width: 800px) {   
+    .burgerNav{
+      z-index: 10;
+      position: absolute;
+      display:  flex;
+      width: 100vw;
+      height: 90vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      gap:100px;
+      background-color: transparent;
+      backdrop-filter: blur(10px); 
+      transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+      transition-delay: 100ms;
+    }
+    
+    .nav{
+      justify-content: space-between;
+    }
+    .navList{
+        display: none;
+    }
+  
+
+}
