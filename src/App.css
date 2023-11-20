@@ -28,7 +28,6 @@ color: rgb(238, 70, 70);
 
 
 .spline{
-  height: 90%;
   position: absolute;
 }
 .container{
@@ -214,6 +213,30 @@ color: rgb(238, 70, 70);
     margin-left: 10px;
   }
 }
+
+/* Mobile */
+@media (max-width:470px){
+  .wrapper{
+    width: 80%;
+  }
+  .downloadButton{
+    width: 80%;
+  }
+}
+@media (max-height:400px ) {
+  .wrapper{
+    width: 80%;
+    margin-left: 20px;
+  }
+  .downloadButton{
+    width: 80%;
+    padding: 12px 95px;
+  }
+  .spline{
+    display: none;
+  }
+}
+
 @keyframes slideToRightWithFade {
   0%{
     transform:translateX(-200px);
