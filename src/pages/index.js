@@ -21,9 +21,9 @@ export default function Index(){
           <h1 className='homeh1p'>Lets Work Together</h1>
           <p className='homeh1p'>
             Hi, I'm Panha Sim, a passionate Software Engineer
-            I bring idea to life. Specializing in React, Spring Boot, 
+            I bring ideas to life. Specializing in React, Spring Boot, 
             ASP.NET, Express.js, MongoDB, and PostgreSQL
-            let’s connect and explore how we can collaborate 
+            let's connect and explore how we can collaborate 
             on your next project.
             </p>
           <div>
